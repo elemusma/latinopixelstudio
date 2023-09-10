@@ -1,0 +1,36 @@
+.img-hero {
+  min-height: 300px;
+  height: 85vh;
+  object-fit: cover;
+}
+
+body:not(.home) .img-hero {
+  min-height: 200px;
+  height: 30vh;
+}
+
+h1 {
+  animation: showText 1s linear;
+}
+
+.ml12 {
+  font-weight: 200;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
