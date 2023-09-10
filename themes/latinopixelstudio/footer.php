@@ -46,7 +46,7 @@ echo get_template_part('partials/si');
 <!-- end of col -->
 <!-- start of col -->
 <div class="col-lg-3 col-md-6 pt-lg-0 pt-5">
-<h5>Recent Posts</h5>
+<span class="h2" style="font-size:1.5rem;">Recent Posts</span>
 <?php
 $recentBlog = new WP_Query(array(
 'posts_per_page' => 5,
@@ -64,7 +64,7 @@ $recentBlog->the_post(); ?>
 <?php
 // start of col
 echo '<div class="col-lg-3 col-md-6 pt-lg-0 pt-5">';
-echo '<h5>Tools</h5>';
+echo '<span class="h2" style="font-size:1.5rem;">Tools</span>';
 
 wp_nav_menu(array(
     'menu' => 'Tools',

@@ -13,4 +13,11 @@
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
     text-decoration: none;
+    display: inline-block;
+    transition: all .25s ease-in-out;
+}
+
+.btn-main:hover {
+    background: var(--accent-secondary);
+    color: white;
 }

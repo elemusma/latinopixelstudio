@@ -21,7 +21,7 @@ if(get_field('body','options')) { the_field('body','options'); }
 
 <div class="z-1 position-relative">
 
-<header class="position-relative">
+<header class="position-relative" style="z-index:1;">
 
 <!-- start of nav -->
 <div class="blank-space-before-header"></div>
@@ -143,23 +143,24 @@ echo '</div>'; // end of col for navigation
 </header>
 <?php if( !is_front_page() && !is_search() && !is_home() && !is_single() ) { 
 
-	?>
-<section class="hero position-relative pt-5 pb-5" style="background: #ADA996;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-">
-<div class="container">
+	
+echo '<section class="hero position-relative" style="padding:50px 0px;">';
 
+echo '<div class="sunburst">
+<div class="outer">
+	<b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+</div>
+</div>';
+
+echo '<div class="container">';
+
+?>
 
 <div class="row">
 <div class="col-md-9">
 <?php if(is_page() && !is_front_page() ){ ?>
 <h1 class="h3 ml2 d-inline-block"><?php the_title(); ?></h1>
-<?php if(is_page(38)){ ?>
-<div class="">
-<script>Date.getTime()</script>
-</div>
-<?php } ?>
+
 <div class="">
 <?php the_field('subtitle'); ?>
 </div>

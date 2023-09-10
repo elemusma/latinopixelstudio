@@ -35,11 +35,13 @@ span#feature-text {
 }
 
 a {
-    color: #6381e5;
+    color: var(--accent-tertiary);
+    text-decoration: none;
 }
 
 a:hover {
-    color: #4b6cd8;
+    /* color: var(--accent-quaternary); */
+    text-decoration: underline;
 }
 
 footer a {
@@ -48,6 +50,30 @@ footer a {
 
 .text-white * {
     color: white;
+}
+
+.text-accent {
+    color: var(--accent-primary);
+}
+
+.text-accent-secondary {
+    color: var(--accent-secondary);
+}
+
+.text-accent-tertiary {
+    color: var(--accent-tertiary);
+}
+
+.text-accent-quaternary {
+    color: var(--accent-quaternary);
+}
+
+.text-accent-quinary {
+    color: var(--accent-quinary);
+}
+
+.text-accent-senary {
+    color: var(--accent-senary);
 }
 
 b,

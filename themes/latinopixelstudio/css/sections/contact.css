@@ -1,5 +1,5 @@
 input.button {
-    background: #6381e5;
+    background: var(--accent-tertiary);
     color: white;
     border: none;
     padding: 10px;
@@ -11,7 +11,7 @@ input.button {
 }
 
 input.button:hover {
-    background: #5374e0;
+    background: var(--accent-quaternary);
 }
 
 input,

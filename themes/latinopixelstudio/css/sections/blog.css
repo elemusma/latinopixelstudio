@@ -106,7 +106,7 @@ div#sidebarOverlay {
 }
 
 textarea#comment {
-    width: 100%;
+    width: 94%;
 }
 
 input#submit,
@@ -116,6 +116,7 @@ input#searchsubmit {
     padding: 10px 30px;
     color: white;
     cursor: pointer;
+    box-shadow: none;
 }
 
 /* pagination */

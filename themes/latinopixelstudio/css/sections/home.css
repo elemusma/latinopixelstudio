@@ -29,11 +29,11 @@
     padding-top: 1090px;
     margin: -700px 0 0 -340px;
     -webkit-animation-name: rotate1;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 7.5s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: rotate1;
-    -moz-animation-duration: 2s;
+    -moz-animation-duration: 7.5s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
 }

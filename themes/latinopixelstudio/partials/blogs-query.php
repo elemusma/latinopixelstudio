@@ -1,5 +1,5 @@
-<div class="col-md-6 pr-lg-5 text-white mb-5">
-<div class="h-100 bg-accent box-shadow col-blog">
+<div class="col-md-6 pr-lg-5 text-white mb-5" style="margin-bottom:1.5rem;">
+<div class="h-100 bg-accent-secondary box-shadow col-blog">
 
     
 <?php 
@@ -12,9 +12,9 @@
 // echo '</div>';
 ?>
 
-<div class="position-relative w-100 blog-content p-4 z-1">
+<div class="" style="padding:1rem;">
 
-<a href="<?php the_permalink(); ?>" class="text-white">
+<a href="<?php the_permalink(); ?>" class="text-white" style="text-decoration:none;">
 <h3 class="h4 text-white heading"><?php the_title(); ?></h3>
 </a>
 
@@ -26,7 +26,7 @@
 // 	the_tags('Tags: '); 
 	?> 
 	<span>Categories: <?php the_category( ', ', 'multiple', $post->ID); ?></span></p>
-<a href="<?php the_permalink(); ?>" class="text-white" style="text-decoration:underline;">Read More</a>
+<a href="<?php the_permalink(); ?>" class="text-white" style="text-decoration:none;">Read More</a>
 </div>
 
 

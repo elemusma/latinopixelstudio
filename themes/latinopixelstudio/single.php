@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="pt-5 pb-5 body position-relative">
+<section class="body position-relative" style="padding:1.5rem;">
 <div class="overlay position-fixed w-100 h-100 bg-img d-md-none d-block" id="sidebarOverlay" style="top:0;left:-100%;"></div>
 <div class="container">
 <div class="row justify-content-center">

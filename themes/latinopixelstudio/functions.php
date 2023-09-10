@@ -78,7 +78,7 @@ function latino_pixel_studio_stylesheets_footer() {
 
 	// owl carousel
 	// wp_enqueue_script('jquery-min', get_theme_file_uri('/owl-carousel/jquery.min.js'));
-	if(!is_front_page()){
+	if(!is_front_page() && !is_single()){
 		wp_enqueue_script('anime-js', '//cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js');
 		wp_enqueue_script('anime-custom-js', get_theme_file_uri('/js/anime.js'));
 	}
@@ -216,5 +216,24 @@ function remove_website_field_from_comment_form($fields)
     }
     return $fields;
 }
+
+/*Base URL shorcode*/
+add_shortcode( 'base_url', 'baseurl_shortcode' );
+function baseurl_shortcode( $atts ) {
+
+    return site_url();
+	// [base_url]
+
+}
+
+function disable_email_and_website_fields($fields) {
+    unset($fields['author']); // Remove the email field
+    unset($fields['email']); // Remove the email field
+    unset($fields['url']);   // Remove the website URL field
+    return $fields;
+}
+
+add_filter('comment_form_default_fields', 'disable_email_and_website_fields');
+
 
 ?>

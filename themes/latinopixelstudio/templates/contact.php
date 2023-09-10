@@ -4,7 +4,16 @@
  */
 get_header(); ?>
 <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/sections/contact.css"> -->
-<section class="pt-5 pb-5 position-relative" style="" id="hire-me">
+<section class="position-relative" style="padding:25px 0px;" id="hire-me">
+
+<?php
+// echo '<div class="sunburst">
+// <div class="outer">
+// 	<b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+// </div>
+// </div>';
+?>
+
     <div class="container pb-4">
         <div class="row justify-content-center">
             <div class="col-md-6">

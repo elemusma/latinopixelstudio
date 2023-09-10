@@ -2,12 +2,12 @@
 
 get_header();
 
-echo '<section class="pt-5 pb-5 body">';
+echo '<section class="body" style="padding:25px 0px;">';
 echo '<div class="container">';
 echo '<div class="row">';
 
 echo '<div class="col-12 pb-4">';
-echo '<h1>' . get_the_title(168) . '</h1>';
+echo '<h1 class="h3 ml2">' . get_the_title(168) . '</h1>';
 echo '</div>';
 
 

@@ -16,13 +16,13 @@
 // }
 
 const carouselText = [
-  { text: "WordPress", color: "#007BFF" },
-  { text: "PHP", color: "#CF995F" },
-  { text: "JavaScript", color: "#59C3C3" },
-  { text: "CSS", color: "#524632" },
-  { text: "HTML", color: "#CF995F" },
-  { text: "Hosting Management", color: "#007BFF" },
-  { text: "SSH/FTP", color: "#59C3C3" }
+  { text: "WordPress", color: "#1F184A" },
+  { text: "PHP", color: "#B5539F" },
+  { text: "JavaScript", color: "#03BAAF" },
+  { text: "CSS", color: "#EC1F2D" },
+  { text: "HTML", color: "#1F184A" },
+  { text: "Hosting Manager", color: "#B5539F" },
+  // { text: "SSH/FTP", color: "#03BAAF" }
 ]
 
 $(document).ready(async function () {

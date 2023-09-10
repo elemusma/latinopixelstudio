@@ -4,6 +4,7 @@
     --accent-tertiary: #B5539F;
     --accent-quaternary: #03BAAF;
     --accent-quinary: #FDB716;
+    --accent-senary: #EC1F2D;
 }
 
 body.nav-open {
@@ -46,6 +47,10 @@ body.nav-open {
 
 a.bg-accent:hover {
     background: #5778e4;
+}
+
+.bg-white {
+    background: white;
 }
 
 .bg-light {

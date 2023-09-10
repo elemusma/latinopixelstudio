@@ -21,6 +21,10 @@ path.cls-2 {
 
 /* end of logo */
 
+.search-icon svg path {
+  fill: var(--accent-primary) !important;
+}
+
 /* nav {
   background: #000000;
   background: -webkit-linear-gradient(to right, #434343, #000000);
@@ -63,7 +67,7 @@ ul.menu>li.menu-item-has-children {
 
 ul.menu>li>a {
   padding: 0px 9px;
-  /* color: white; */
+  color: white;
   /* font-weight: 200; */
   /* text-transform: uppercase; */
   /* font-size: 14px;
