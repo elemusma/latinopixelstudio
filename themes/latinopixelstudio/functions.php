@@ -9,6 +9,7 @@ wp_enqueue_style('body', get_theme_file_uri('/css/sections/body.css'));
 // wp_enqueue_style('new-nav', get_theme_file_uri('/css/sections/new-nav.css'));
 wp_enqueue_style('nav', get_theme_file_uri('/css/sections/nav.css'));
 wp_enqueue_style('social-icons', get_theme_file_uri('/css/sections/social-icons.css'));
+wp_enqueue_style('home', get_theme_file_uri('/css/sections/home.css'));
 
 if(is_page_template('templates/portfolio.php')){
 	wp_enqueue_style('portfolio-css', get_theme_file_uri('/css/sections/portfolio.css'));

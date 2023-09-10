@@ -4,6 +4,13 @@ get_header();
 if ( ! post_password_required( $post ) ) {
 
     echo '<section class="position-relative" style="padding:100px 0;">';
+
+    echo '<div class="sunburst">
+    <div class="outer">
+        <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+    </div>
+</div>';
+
         echo '<div class="container">';
             echo '<div class="row align-items-center">';
 
