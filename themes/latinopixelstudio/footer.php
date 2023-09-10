@@ -1,5 +1,10 @@
-<footer>
-<section class="bg-light" style="padding:50px 0px;">
+<?php
+echo '<footer style="position:relative;">';
+echo '<section class="bg-accent-secondary text-white" style="padding:50px 0px;">';
+
+echo '<div class="position-absolute w-100" style="height:50px;bottom:0;left:0;background:url(' . wp_get_attachment_image_url(2006, 'full') . ');background-repeat:repeat-x;background-size:contain;"></div>';
+
+?>
 <div class="container">
 <div class="row">
 <!-- start of col -->
@@ -8,7 +13,7 @@
 <a href="<?php echo home_url(); ?>">
 <?php $logo = get_field('logo','options');
 // echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-50 h-auto']); 
-echo get_template_part('partials/new-logo');
+// echo get_template_part('partials/new-logo');
 ?>
 </a>
 </div>

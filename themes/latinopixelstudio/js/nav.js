@@ -1,4 +1,4 @@
-let navigation = document.querySelector('.nav');
+let navigation = document.querySelector('nav');
 let secondaryNav = document.querySelector('.secondary-navbar');
 let blankSpace = document.querySelector('.blank-space-before-header');
 

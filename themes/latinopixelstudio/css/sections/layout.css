@@ -519,6 +519,10 @@ body {
     }
 }
 
+.d-block {
+    display: block !important;
+}
+
 /* Display Flex */
 .d-flex {
     display: flex !important;

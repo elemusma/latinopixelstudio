@@ -32,6 +32,8 @@ wp_enqueue_style('lato', '//fonts.googleapis.com/css2?family=Lato:ital,wght@0,10
 	
 wp_enqueue_style('open-sans', '//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
+wp_enqueue_style('relation-two', '//use.typekit.net/vgh8cpz.css');
+
 }
 add_action('wp_enqueue_scripts', 'latino_pixel_studio_stylesheets');
 

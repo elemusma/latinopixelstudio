@@ -8,7 +8,7 @@ Version: 1.0
 
 */
 
-.logged-in .nav.position-fixed {
+.logged-in nav.position-fixed {
     margin-top: 32px;
 }
 

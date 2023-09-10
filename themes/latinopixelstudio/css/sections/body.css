@@ -25,7 +25,23 @@ body.nav-open {
 }
 
 .bg-accent {
-    background: #6381e5;
+    background: var(--accent-primary);
+}
+
+.bg-accent-secondary {
+    background: var(--accent-secondary);
+}
+
+.bg-accent-tertiary {
+    background: var(--accent-tertiary);
+}
+
+.bg-accent-quaternary {
+    background: var(--accent-quaternary);
+}
+
+.bg-accent-quinary {
+    background: var(--accent-quinary);
 }
 
 a.bg-accent:hover {

@@ -15,16 +15,6 @@
 <body <?php body_class(); ?>>
 <?php 
 if(get_field('body','options')) { the_field('body','options'); }
-
-	if(have_rows('hreflang_tags')): while(have_rows('hreflang_tags')): the_row();
-	
-// 	echo get_sub_field('rel');
-// 	echo get_sub_field('href');
-// 	echo get_sub_field('hreflang');
-	
-echo '<link rel="' . get_sub_field('rel') . '" href="' . get_sub_field('href') . '" hreflang="' . get_sub_field('hreflang') . '" />';
-	
-	endwhile; endif;
 	
 ?>
 <div class="position-relative w-100 primary-navbar" style="top:0;z-index:10;">
@@ -35,29 +25,53 @@ echo '<link rel="' . get_sub_field('rel') . '" href="' . get_sub_field('href') .
 
 <!-- start of nav -->
 <div class="blank-space-before-header"></div>
-<div class="nav position-relative pt-1 pb-1 w-100" style="">
-   
+<nav class="position-relative pt-1 pb-1 w-100 bg-accent-secondary" style="z-index:10;padding:5px 0px;">
+
+<?php
+
+// echo '<div class="position-absolute w-100" style="top:0;left:0;">';
+// echo get_template_part('partials/party-decoration');
+// echo '</div>';
+// echo '<div class="position-absolute w-100" style="top:0;left:0;height:75px;background:url(' . wp_get_attachment_image_url(2003, 'full') . ');background-repeat:repeat-x;background-size:contain;">';
+// echo '</div>';
+
+// echo '<div class="position-absolute w-100" style="height:55px;top:0;left:0;background:url(' . wp_get_attachment_image_url(2007, 'full') . ');background-repeat:repeat-x;background-size:contain;"></div>';
+
+echo '<div class="position-absolute h-100 bg-accent-tertiary" style="bottom:0;right:0;clip-path: polygon(0 100%, 100% 100%, 100% 0);
+width:100px;"></div>';
+echo '<div class="position-absolute h-100 bg-accent-quaternary" style="bottom:0;left:0;clip-path: polygon(0 100%, 100% 100%, 0 0);
+width:100px;"></div>';
+
+?>
+
 <div class="container">
-<div class="row align-items-center">
+<div class="row align-items-center justify-content-between">
 <div class="col-md-1 col-2">
 	
 <?php
 echo '<a href="' . home_url() . '">';
 $logo = get_field('logo','options');
 
-// echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100','style'=>'height:auto;']); 
+echo wp_get_attachment_image($logo['id'],'full',"",[
+	'class'=>'w-100',
+	'style'=>'height:auto;'
+]); 
 
-echo get_template_part('partials/new-logo');
+// echo get_template_part('partials/new-logo');
 
 // echo '<p>hello</p>';
 echo '</a>';
+
+echo '</div>';
+echo '<div class="col-lg-4 col-7">';
+echo '<span class="text-accent relation-two d-block" style="font-size:2.5rem;margin:0;line-height:1;">' . get_bloginfo('name') . '</span>';
+echo '<p class="text-white d-block" style="margin:0;font-size:75%;line-height:1;">';
+echo '<em>' . get_bloginfo('description') . '</em>';
+echo '</p>';
+echo '</div>';
+
 ?>
-</div>
-<div class="col-lg-4 col-7">
-<p class="mb-0 text-white small pr-md-0 pr-5">
-<em>Pixel perfect and responsive websites</em>
-</p>
-</div>
+
 <div class="col-lg-7 col-3 d-flex justify-content-end align-items-center">
 <a id="navToggle" class="nav-toggle">
 <div>
@@ -105,7 +119,7 @@ $logo = get_field('logo','options');
 // }
 
 echo '<div style="width:100px;">';
-echo get_template_part('partials/new-logo');
+// echo get_template_part('partials/new-logo');
 echo '</div>';
 
 echo '</a>';
@@ -124,7 +138,7 @@ echo '</div>'; // end of col for navigation
 </div>
 </div>
 
-</div>
+</nav>
 <!-- end of nav -->
 </header>
 <?php if( !is_front_page() && !is_search() && !is_home() && !is_single() ) { 
@@ -137,34 +151,6 @@ background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3
 <div class="container">
 
 
-<?php if(is_front_page()) {
-// echo '<div class="row justify-content-between align-items-center">';
-// echo '<div class="col-md-8 order-md-1 order-2">';
-
-// echo '<h1 class="h2 d-inline-block">' . get_the_title() . '</h1>';
-// echo '<div class="">';
-// the_field('subtitle');
-// echo '</div>';
-
-// $linkCTAHeader = get_field('cta_button');
-// if( $linkCTAHeader ): 
-// $linkCTAHeader_url = $linkCTAHeader['url'];
-// $linkCTAHeader_title = $linkCTAHeader['title'];
-// $linkCTAHeader_target = $linkCTAHeader['target'] ? $linkCTAHeader['target'] : '_self';
-
-// echo '<a href="' . $linkCTAHeader_url . '" target="' . $linkCTAHeader_target . '" class="btn btn-lg bg-accent-gradient text-white mt-4 br-25">' . $linkCTAHeader_title . '</a>';
-// endif; 
-
-
-// echo '</div>';
-
-// // <!-- <div class="col-md-6 order-md-2 order-1 col-video">
-// // <iframe width="100%" height="315" src="https://www.youtube.com/embed/cOj7OH5k0x8?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="skip-lazy"></iframe>
-// // </div> -->
-
-// echo '</div>';
-} 
-?>
 <div class="row">
 <div class="col-md-9">
 <?php if(is_page() && !is_front_page() ){ ?>
@@ -187,21 +173,7 @@ $linkCTAHeader_target = $linkCTAHeader['target'] ? $linkCTAHeader['target'] : '_
 <a href="<?php echo $linkCTAHeader_url; ?>" target="<?php echo $linkCTAHeader_target; ?>" class="btn btn-lg bg-accent-gradient text-white mt-4 br-25"><?php echo $linkCTAHeader_title; ?></a>
 <?php endif; ?>
 <?php } elseif(is_single()){ ?> 
-<!-- <div class="col-12">
-<h1 class="text-white"><?php single_post_title(); ?></h1>
-<div class="text-white">
-<?php the_field('subtitle'); ?>
-</div>
-<?php 
-$linkCTAHeader = get_field('cta_button');
-if( $linkCTAHeader ): 
-$linkCTAHeader_url = $linkCTAHeader['url'];
-$linkCTAHeader_title = $linkCTAHeader['title'];
-$linkCTAHeader_target = $linkCTAHeader['target'] ? $linkCTAHeader['target'] : '_self';
-?>
-<a href="<?php echo $linkCTAHeader_url; ?>" target="<?php echo $linkCTAHeader_target; ?>" class="btn btn-lg bg-accent-gradient text-white mt-4 br-25"><?php echo $linkCTAHeader_title; ?></a>
-<?php endif; ?>
-</div> -->
+
 <?php } elseif(is_author()){ ?> 
 <h1 class="">Author: <?php the_author(); ?></h1>
 <?php } elseif(is_tag()){ ?> 

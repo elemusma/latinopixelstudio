@@ -66,7 +66,7 @@ strong,
     font-family: 'proxima_novabold';
 } */
 .text-accent {
-    color: #6381e5;
+    color: var(--accent-primary);
 }
 
 .text-gray {
@@ -99,4 +99,8 @@ strong,
     background-image: -moz-linear-gradient(45deg, #60bdfc 0%, #6381e5 100%) !important;
     background-image: -webkit-linear-gradient(45deg, #60bdfc 0%, #6381e5 100%) !important;
     background-image: linear-gradient(45deg, #60bdfc 0%, #6381e5 100%) !important;
+}
+
+.relation-two {
+    font-family: relation-two, sans-serif;
 }

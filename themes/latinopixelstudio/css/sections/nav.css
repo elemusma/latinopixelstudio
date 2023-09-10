@@ -21,12 +21,12 @@ path.cls-2 {
 
 /* end of logo */
 
-.nav {
+/* nav {
   background: #000000;
   background: -webkit-linear-gradient(to right, #434343, #000000);
   background: linear-gradient(to right, #434343, #000000);
   z-index: 10;
-}
+} */
 
 #search-icon path.cls-1 {
   fill: #edb91d;
