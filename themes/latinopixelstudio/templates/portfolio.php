@@ -37,10 +37,10 @@ $websiteLink = get_sub_field('view_website');
 echo '<div class="col-lg-4 col-md-6 col-12 text-center" style="margin-bottom:1.5rem;">';
 echo '<div class="position-relative">';
 
-echo '<a href="' . $websiteLink . '" target="_blank" class="position-absolute d-inline-block w-100 h-100 d-flex align-items-center justify-content-center text-white link-view-website" style="top:0;left:0;">';
-echo '<div class="position-absolute w-100 h-100" style="top:0;left:0;background:rgba(0,0,0,.5);"></div>';
+echo '<a href="' . $websiteLink . '" target="_blank" class="position-absolute d-inline-block w-100 h-100 d-flex align-items-center justify-content-center text-white link-view-website text-accent-secondary" style="top:0;left:0;">';
+echo '<div class="position-absolute w-100 h-100 bg-accent" style="top:0;left:0;opacity:.75"></div>';
 
-echo '<span class="position-relative">View Website</span>';
+echo '<span class="position-relative text-accent-secondary bold">View Website</span>';
 
 echo '</a>';
 
