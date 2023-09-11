@@ -4,7 +4,7 @@
     display: none;
 }
 </style>
-<section class="pt-5 pb-5">
+<section class="" style="padding:25px 0px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
