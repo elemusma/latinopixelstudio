@@ -45,9 +45,9 @@ body.nav-open {
     background: var(--accent-quinary);
 }
 
-a.bg-accent:hover {
+/* a.bg-accent:hover {
     background: #5778e4;
-}
+} */
 
 .bg-white {
     background: white;
@@ -174,34 +174,34 @@ pre.wp-block-code {
 
 /*** Works on common browsers ***/
 ::selection {
-    background-color: #6381e5;
+    background-color: var(--accent-primary);
     color: #fff;
     -webkit-text-fill-color: white !important;
 }
 
 /*** Mozilla based browsers ***/
 ::-moz-selection {
-    background-color: #6381e5;
+    background-color: var(--accent-primary);
     color: #fff;
     -webkit-text-fill-color: white !important;
 }
 
 /***For Other Browsers ***/
 ::-o-selection {
-    background-color: #6381e5;
+    background-color: var(--accent-primary);
     color: #fff;
     -webkit-text-fill-color: white !important;
 }
 
 ::-ms-selection {
-    background-color: #6381e5;
+    background-color: var(--accent-primary);
     color: #fff;
     -webkit-text-fill-color: white !important;
 }
 
 /*** For Webkit ***/
 ::-webkit-selection {
-    background-color: #6381e5;
+    background-color: var(--accent-primary);
     color: #fff;
     -webkit-text-fill-color: white !important;
 }

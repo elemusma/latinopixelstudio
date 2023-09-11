@@ -5,6 +5,9 @@ wp_enqueue_style('style', get_stylesheet_uri() );
 
 
 wp_enqueue_style('layout', get_theme_file_uri('/css/sections/layout.css'));
+// fonts
+wp_enqueue_style('relation-two', '//use.typekit.net/vgh8cpz.css');
+wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));
 wp_enqueue_style('body', get_theme_file_uri('/css/sections/body.css'));
 // wp_enqueue_style('new-nav', get_theme_file_uri('/css/sections/new-nav.css'));
 wp_enqueue_style('nav', get_theme_file_uri('/css/sections/nav.css'));
@@ -33,8 +36,6 @@ wp_enqueue_style('lato', '//fonts.googleapis.com/css2?family=Lato:ital,wght@0,10
 	
 wp_enqueue_style('open-sans', '//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-wp_enqueue_style('relation-two', '//use.typekit.net/vgh8cpz.css');
-
 }
 add_action('wp_enqueue_scripts', 'latino_pixel_studio_stylesheets');
 
@@ -47,8 +48,6 @@ function latino_pixel_studio_stylesheets_footer() {
 	// 	wp_enqueue_style('home', get_theme_file_uri('/css/sections/home.css'));
 	// }
 		// wp_enqueue_style('woocommerce-custom', get_theme_file_uri('/css/sections/woocommerce.css'));
-	// fonts
-	wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));
 	
 	// if(is_page_template('templates/contact.php')){
 		wp_enqueue_style('contact', get_theme_file_uri('/css/sections/contact.css'));
@@ -78,10 +77,14 @@ function latino_pixel_studio_stylesheets_footer() {
 
 	// owl carousel
 	// wp_enqueue_script('jquery-min', get_theme_file_uri('/owl-carousel/jquery.min.js'));
+
+
 	if(!is_front_page() && !is_single()){
 		wp_enqueue_script('anime-js', '//cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js');
 		wp_enqueue_script('anime-custom-js', get_theme_file_uri('/js/anime.js'));
 	}
+
+
 	// wp_enqueue_script('owl-carousel', get_theme_file_uri('/owl-carousel/owl.carousel.min.js'));
 	// wp_enqueue_script('owl-carousel-custom', get_theme_file_uri('/owl-carousel/owl-carousels.js'));
 	// wp_enqueue_script('lightbox-min-js', get_theme_file_uri('/lightbox/lightbox.min.js'));
@@ -235,5 +238,21 @@ function disable_email_and_website_fields($fields) {
 
 add_filter('comment_form_default_fields', 'disable_email_and_website_fields');
 
+function spacer_shortcode( $atts, $content = null ) {
+
+	$a = shortcode_atts( array(
+
+		'class' => '',
+
+		'style' => ''
+
+	), $atts );
+
+	return '<div class="spacer ' . esc_attr($a['class']) . '" style="' . esc_attr($a['style']) . '"></div>';
+
+	// [spacer class="" style=""]
+}
+
+add_shortcode( 'spacer', 'spacer_shortcode' );
 
 ?>

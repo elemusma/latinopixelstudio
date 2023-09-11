@@ -3,7 +3,7 @@ input.button {
     color: white;
     border: none;
     padding: 10px;
-    max-width: 200px;
+    /* max-width: 300px; */
     border-radius: 25px;
     cursor: pointer;
     transition: all .25s ease-in-out;

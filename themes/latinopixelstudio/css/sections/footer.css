@@ -23,3 +23,7 @@ footer ul.menu li {
 footer ul.menu li a {
     padding-left: 0px;
 }
+
+input#gform_submit_button_3 {
+    margin-top: 0;
+}

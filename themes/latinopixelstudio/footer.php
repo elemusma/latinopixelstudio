@@ -1,22 +1,42 @@
 <?php
 echo '<footer style="position:relative;">';
-echo '<section class="bg-accent-secondary text-white" style="padding:50px 0px;">';
+echo '<section class="bg-accent-secondary text-white" style="padding:50px 0px 75px;">';
 
-echo '<div class="position-absolute w-100" style="height:50px;bottom:0;left:0;background:url(' . wp_get_attachment_image_url(2006, 'full') . ');background-repeat:repeat-x;background-size:contain;"></div>';
+echo '<div class="position-absolute w-100" style="height:50px;bottom:0;left:0;background:url(' . wp_get_attachment_image_url(2006, 'full') . ');background-repeat:repeat-x;background-size:contain;    background-position:bottom;"></div>';
 
 ?>
 <div class="container">
 <div class="row">
 <!-- start of col -->
-<div class="col-lg-4 col-md-6">
-<div class="col-md-5 col-4">
-<a href="<?php echo home_url(); ?>">
-<?php $logo = get_field('logo','options');
-// echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-50 h-auto']); 
-// echo get_template_part('partials/new-logo');
+<?php
+echo '<div class="col-lg-3 col-md-6" style="padding-bottom:1.5rem;">';
+echo '<div class="">';
+
+// echo '<div class="d-flex align-items-center">';
+echo '<a href="' . home_url() . '">';
+
+$logo = get_field('logo','options'); 
+if($logo){
+	echo wp_get_attachment_image($logo['id'],'full',"",[
+		'class'=>'',
+		'style'=>'width:75px;height:auto;'
+	]); 
+
+}
+
+echo '</a>';
+
+// echo '<div style="margin-left:15px;">';
+// echo '<span class="text-accent relation-two d-block" style="font-size:2.5rem;margin:0;line-height:1;">' . get_bloginfo('name') . '</span>';
+// echo '<p class="text-white d-block" style="margin:0;font-size:75%;line-height:1;">';
+// echo '<em>' . get_bloginfo('description') . '</em>';
+// echo '</p>';
+// echo '</div>';
+
+// echo '</div>';
+
+echo '</div>';
 ?>
-</a>
-</div>
 <div class="pt-4">
 <div class="small">
 <?php the_field('website_message','options'); ?>
@@ -27,23 +47,7 @@ echo get_template_part('partials/si');
 </div>
 </div>
 <!-- end of col -->
-<!-- start of col -->
-<!-- <div class="col-lg-2 col-6">
-<h5>CONTACT INFO</h5>
-<div class="pt-2">
-<a href="tel:+1<?php the_field('phone','options'); ?>"><small><?php the_field('phone','options'); ?></small></a>
-</div>
-<div class="pt-2">
-<a href="mailto:<?php the_field('email','options'); ?>"><small><?php the_field('email','options'); ?></small></a>
-</div>
-<div class="pt-2">
-<small><?php the_field('address','options'); ?></small>
-</div>
-<div class="pt-2">
-<a href="https://meetings.hubspot.com/efrain-lemus" target="_blank" rel="noopener noreferrer"><small>Schedule a Call with Me</small></a>
-</div>
-</div> -->
-<!-- end of col -->
+
 <!-- start of col -->
 <div class="col-lg-3 col-md-6 pt-lg-0 pt-5">
 <span class="h2" style="font-size:1.5rem;">Recent Posts</span>
@@ -71,18 +75,20 @@ wp_nav_menu(array(
     'menu_class'=>'menu list-unstyled mb-0 small'
     )); 
 
-// echo '<ul class="list-unstyled">';
-//     echo '<li><a href="' . home_url() . '/random-password-generator-with-javascript/"><small></small>Random Password Generator with JavaScript</a></li>';
-// echo '</ul>';
+echo '</div>';
+// end of col
+
+// start of col
+echo '<div class="col-lg-3 col-md-6 pt-lg-0 pt-5">';
+echo '<span class="h2 d-block" style="font-size:1.5rem;margin-bottom:1rem;">Newsletter</span>';
+echo '<p><small>Receive tips on how to make your day-to-day as a business owner easier.</small></p>';
+
+echo do_shortcode('[gravityform id="3" title="false" description="false" ajax="true"]');
 
 echo '</div>';
 // end of col
 ?>
-<!-- start of col -->
-<!-- <div class="col-lg-3 col-md-6 pt-lg-0 pt-5">
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="efrain-tadeo-lemus-martinez" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/efrain-tadeo-lemus-martinez?trk=profile-badge">Efrain Tadeo Lemus Martinez</a></div>
-</div> -->
-<!-- end of col -->
+
 </div>
 </div>
 </section>

@@ -229,8 +229,15 @@ ul.sub-menu li a {
   }
 
   ul.sub-menu li a {
-    color: black;
+    color: white;
   }
+}
+
+span#navMenuClose {
+  float: right;
+  color: white;
+  font-size: 2rem;
+  padding-top: 10px;
 }
 
 /* for blog and other pages */

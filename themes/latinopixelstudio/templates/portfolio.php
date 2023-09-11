@@ -34,7 +34,7 @@ if(have_rows('portfolio')): ?>
 $partnership = get_sub_field('partnership_with');
 $websiteLink = get_sub_field('view_website');
 
-echo '<div class="col-lg-4 col-6 text-center" style="margin-bottom:1.5rem;">';
+echo '<div class="col-lg-4 col-md-6 col-12 text-center" style="margin-bottom:1.5rem;">';
 echo '<div class="position-relative">';
 
 echo '<a href="' . $websiteLink . '" target="_blank" class="position-absolute d-inline-block w-100 h-100 d-flex align-items-center justify-content-center text-white link-view-website" style="top:0;left:0;">';

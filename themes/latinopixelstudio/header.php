@@ -37,18 +37,28 @@ if(get_field('body','options')) { the_field('body','options'); }
 
 // echo '<div class="position-absolute w-100" style="height:55px;top:0;left:0;background:url(' . wp_get_attachment_image_url(2007, 'full') . ');background-repeat:repeat-x;background-size:contain;"></div>';
 
-echo '<div class="position-absolute h-100 bg-accent-tertiary" style="bottom:0;right:0;clip-path: polygon(0 100%, 100% 100%, 100% 0);
-width:100px;"></div>';
-echo '<div class="position-absolute h-100 bg-accent-quaternary" style="bottom:0;left:0;clip-path: polygon(0 100%, 100% 100%, 0 0);
-width:100px;"></div>';
+echo '<div class="position-absolute h-100 bg-accent-tertiary" style="bottom:0;right:0;
+clip-path: polygon(0 100%, 100% 100%, 100% 0);
+-webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+-ms-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+-o-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+-moz-clip-path: polygon(0 100%, 100% 100%, 100% 0);
+width:125px;"></div>';
+echo '<div class="position-absolute h-100 bg-accent-quaternary" style="bottom:0;left:0;
+clip-path: polygon(0 100%, 100% 100%, 0 0);
+-webkit-clip-path: polygon(0 100%, 100% 100%, 0 0);
+-ms-clip-path: polygon(0 100%, 100% 100%, 0 0);
+-o-clip-path: polygon(0 100%, 100% 100%, 0 0);
+-moz-clip-path: polygon(0 100%, 100% 100%, 0 0);
+width:125px;"></div>';
 
 ?>
 
 <div class="container">
 <div class="row align-items-center justify-content-between">
-<div class="col-md-1 col-2">
 	
-<?php
+	<?php
+	echo '<div class="col-lg-1 col-md-2 col-3">';
 echo '<a href="' . home_url() . '">';
 $logo = get_field('logo','options');
 
@@ -63,7 +73,7 @@ echo wp_get_attachment_image($logo['id'],'full',"",[
 echo '</a>';
 
 echo '</div>';
-echo '<div class="col-lg-4 col-7">';
+echo '<div class="col-lg-4 col-md-6 col-9">';
 echo '<span class="text-accent relation-two d-block" style="font-size:2.5rem;margin:0;line-height:1;">' . get_bloginfo('name') . '</span>';
 echo '<p class="text-white d-block" style="margin:0;font-size:75%;line-height:1;">';
 echo '<em>' . get_bloginfo('description') . '</em>';
@@ -72,8 +82,8 @@ echo '</div>';
 
 ?>
 
-<div class="col-lg-7 col-3 d-flex justify-content-end align-items-center">
-<a id="navToggle" class="nav-toggle">
+<div class="col-lg-7 col-md-4 col-12 d-flex justify-content-md-end justify-content-between align-items-center">
+<a id="navToggle" class="nav-toggle" style="margin-right:50px;">
 <div>
 <div class="line-1 bg-accent"></div>
 <div class="line-2 bg-accent"></div>
@@ -103,31 +113,54 @@ echo '</div>';
 
 
 echo '<div id="navMenuOverlay" class="position-fixed z-2"></div>';
-echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-white desktop-hidden" id="navItems">';
+echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-accent-secondary desktop-hidden" id="navItems">';
 
-echo '<div class="pt-5">';
+echo '<div class="position-absolute w-100" style="height:50px;top:0;left:0;background:url(' . wp_get_attachment_image_url(2007, 'full') . ');background-repeat:repeat-x;background-size:contain;    background-position:top;"></div>';
+echo '<div class="position-absolute w-100" style="height:50px;bottom:0;left:0;background:url(' . wp_get_attachment_image_url(2006, 'full') . ');background-repeat:repeat-x;background-size:contain;    background-position:bottom;"></div>';
+
+echo '<div class="" style="padding-top:65px;">';
+
 echo '<div class="close-menu">';
 echo '<div>';
 echo '<span id="navMenuClose" class="close h1">X</span>';
 echo '</div>';
 echo '</div>';
+
+echo '<div class="d-flex align-items-center">';
 echo '<a href="' . home_url() . '">';
 
 $logo = get_field('logo','options'); 
-// if($logo){
-// echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:250px;']);
-// }
+if($logo){
+	echo wp_get_attachment_image($logo['id'],'full',"",[
+		'class'=>'',
+		'style'=>'width:75px;height:auto;'
+	]); 
 
-echo '<div style="width:100px;">';
-// echo get_template_part('partials/new-logo');
-echo '</div>';
+}
 
 echo '</a>';
+
+echo '<div style="margin-left:15px;">';
+echo '<span class="text-accent relation-two d-block" style="font-size:1.75rem;margin:0;line-height:1;">' . get_bloginfo('name') . '</span>';
+echo '<p class="text-white d-block" style="margin:0;font-size:55%;line-height:1;">';
+echo '<em>' . get_bloginfo('description') . '</em>';
+echo '</p>';
+echo '</div>';
+
+echo '</div>';
+
 echo '</div>';
 wp_nav_menu(array(
 'menu' => 'primary',
 'menu_class'=>'menu list-unstyled mb-0'
 )); 
+
+echo get_template_part('partials/si');
+
+
+echo '<span class="h2 d-block text-white" style="font-size:1.25rem;margin-bottom:1rem;padding-top:1.5rem;">Business Owner Tips Newsletter</span>';
+echo do_shortcode('[gravityform id="3" title="false" description="false" ajax="true"]');
+
 echo '</div>'; // end of col for navigation
 
 	?>

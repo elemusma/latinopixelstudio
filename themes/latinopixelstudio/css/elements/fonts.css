@@ -48,7 +48,8 @@ footer a {
     text-decoration: none;
 }
 
-.text-white * {
+.text-white *,
+.text-white {
     color: white;
 }
 
@@ -129,4 +130,5 @@ strong,
 
 .relation-two {
     font-family: relation-two, sans-serif;
+    /* font-family: 'tangerineregular'; */
 }
