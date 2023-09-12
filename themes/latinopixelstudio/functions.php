@@ -9,6 +9,7 @@ wp_enqueue_style('layout', get_theme_file_uri('/css/sections/layout.css'));
 wp_enqueue_style('relation-two', '//use.typekit.net/vgh8cpz.css');
 wp_enqueue_style('fonts', get_theme_file_uri('/css/elements/fonts.css'));
 wp_enqueue_style('body', get_theme_file_uri('/css/sections/body.css'));
+wp_enqueue_style('contact', get_theme_file_uri('/css/sections/contact.css'));
 // wp_enqueue_style('new-nav', get_theme_file_uri('/css/sections/new-nav.css'));
 wp_enqueue_style('nav', get_theme_file_uri('/css/sections/nav.css'));
 wp_enqueue_style('social-icons', get_theme_file_uri('/css/sections/social-icons.css'));
@@ -50,7 +51,7 @@ function latino_pixel_studio_stylesheets_footer() {
 		// wp_enqueue_style('woocommerce-custom', get_theme_file_uri('/css/sections/woocommerce.css'));
 	
 	// if(is_page_template('templates/contact.php')){
-		wp_enqueue_style('contact', get_theme_file_uri('/css/sections/contact.css'));
+		
 	// }
 	wp_enqueue_style('img', get_theme_file_uri('/css/elements/img.css'));
 

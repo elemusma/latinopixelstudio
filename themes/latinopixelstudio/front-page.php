@@ -3,7 +3,7 @@ get_header();
 
 if ( ! post_password_required( $post ) ) {
 
-    echo '<section class="position-relative" style="padding:100px 0;">';
+    echo '<section class="position-relative hero-content" style="padding:100px 0;">';
 
     echo '<div class="sunburst">
     <div class="outer">
@@ -14,8 +14,8 @@ if ( ! post_password_required( $post ) ) {
         echo '<div class="container">';
             echo '<div class="row align-items-center">';
 
-                echo '<div class="col-lg-5 pb-lg-0 pb-5">';
-                echo '<h1 class="text-accent-secondary" style="font-size:2.5rem;margin-bottom:0px;">Exclusive Website Offer<br>Don\'t Miss Out!</h1>';
+                echo '<div class="col-lg-5 col-md-12">';
+                echo '<h1 class="text-accent-secondary" style="font-size:2.05rem;margin-bottom:0px;">Exclusive Website Offer<br>Don\'t Miss Out!</h1>';
 
                 echo '<p style="font-size:80%;"><em>Starting from</em></p>';
 
@@ -27,9 +27,16 @@ if ( ! post_password_required( $post ) ) {
                 echo '<span class="text-accent-senary relation-two" style="font-size:1rem;">99</span>';
                 echo '</div>';
 
-                echo '<div class="d-flex align-items-start" style="margin:0px 0px 0px 25px;">';
+                echo '<div style="margin:0px 0px 0px 25px;">';
+
+                echo '<div class="d-flex align-items-start" style="">';
                 echo '<h4 class="text-accent-secondary" style="margin:0px;text-decoration: line-through;"><em>$1,250.</em></h4>';
                 echo '<span class="text-accent-secondary" style="font-size:.5rem;text-decoration: line-through;"><em>00</em></span>';
+                echo '</div>';
+
+                echo '<span style="font-size:80%;"><em>Savings</em></span>';
+                echo '<h2 class="text-accent-septenary" style="margin:0px;">52%</h2>';
+
                 echo '</div>';
 
 
@@ -50,7 +57,7 @@ if ( ! post_password_required( $post ) ) {
                 // echo '<a href="' . home_url() . '/portfolio/" target="_self" class="text-accent-secondary">View Portfolio =></a>';
                 echo '</div>';
 
-                echo '<div class="col-lg-7">';
+                echo '<div class="col-lg-7 col-md-12">';
                 
                 echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]');
                 // echo wp_get_attachment_image(1798,'full','',[

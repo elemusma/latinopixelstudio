@@ -77,6 +77,10 @@ footer a {
     color: var(--accent-senary);
 }
 
+.text-accent-septenary {
+    color: var(--accent-septenary);
+}
+
 b,
 strong,
 .bold {
