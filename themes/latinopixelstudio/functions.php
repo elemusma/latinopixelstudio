@@ -105,10 +105,10 @@ function latino_pixel_studio_stylesheets_footer() {
 		wp_enqueue_script('tools-dividend-yield-calculator-js', get_theme_file_uri('/js/tools-dividend-yield-calculator.js'));
 	}
 
-	if(is_front_page()){
-		wp_enqueue_script('home-jquery-js', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js');
-		wp_enqueue_script('home-js', get_theme_file_uri('/js/home.js'));
-	}
+	// if(is_front_page()){
+	// 	wp_enqueue_script('home-jquery-js', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js');
+	// 	wp_enqueue_script('home-js', get_theme_file_uri('/js/home.js'));
+	// }
 
 	if(is_single() || is_page(16)){
 		wp_enqueue_script('blog-js', get_theme_file_uri('/js/blog.js'));

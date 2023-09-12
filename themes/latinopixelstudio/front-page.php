@@ -15,22 +15,43 @@ if ( ! post_password_required( $post ) ) {
             echo '<div class="row align-items-center">';
 
                 echo '<div class="col-lg-5 pb-lg-0 pb-5">';
-                echo '<h1 class="bold" style="">Your Dedicated'; 
-                echo '<div style="min-height:55px;">';
+                echo '<h1 class="text-accent-secondary" style="font-size:2.5rem;margin-bottom:0px;">Exclusive Website Offer<br>Don\'t Miss Out!</h1>';
 
-                echo '<span id="feature-text" style="font-size:2.75rem;"></span>';
-                echo '<span class="input-cursor"></span>';
+                echo '<p style="font-size:80%;"><em>Starting from</em></p>';
 
+                echo '<div class="d-flex align-items-start">';
+                
+                
+                echo '<div class="d-flex align-items-start">';
+                echo '<h2 class="relation-two text-accent-senary" style="margin:0px;font-size:4.5rem;">$599.</h2>';
+                echo '<span class="text-accent-senary relation-two" style="font-size:1rem;">99</span>';
                 echo '</div>';
 
-                echo 'Developer</h1>';
-                echo '<h2 class="h5">Providing swift, flawless web solutions</h2>';
-                echo '<p>As a website developer, I offer the perfect blend of speed and top-notch quality, ensuring your project gets the rapid, high-quality attention it deserves.</p>';
+                echo '<div class="d-flex align-items-start" style="margin:0px 0px 0px 25px;">';
+                echo '<h4 class="text-accent-secondary" style="margin:0px;text-decoration: line-through;"><em>$1,250.</em></h4>';
+                echo '<span class="text-accent-secondary" style="font-size:.5rem;text-decoration: line-through;"><em>00</em></span>';
+                echo '</div>';
+
+
+                echo '</div>';
+                // echo '<h1 class="bold" style="">Your Dedicated'; 
+                // echo '<div style="min-height:55px;">';
+
+                // echo '<span id="feature-text" style="font-size:2.75rem;"></span>';
+                // echo '<span class="input-cursor"></span>';
+
+                // echo '</div>';
+
+                // echo 'Developer</h1>';
+                echo '<h2 class="text-accent-tertiary" style="margin:0px;">Your success is my priority!</h2>';
+                echo '<h3 class="">Only 10 Spots Left</h3>';
+                echo '<p>Thorough work to give you the best results. Premium and fast support when you need it.</p>';
+                echo '<h4>Fill out the form to get started</h4>';
                 // echo '<a href="' . home_url() . '/portfolio/" target="_self" class="text-accent-secondary">View Portfolio =></a>';
                 echo '</div>';
 
                 echo '<div class="col-lg-7">';
-                echo '<h3>Fill out the form to get started</h3>';
+                
                 echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]');
                 // echo wp_get_attachment_image(1798,'full','',[
                 //     'class'=>'w-100 h-100'

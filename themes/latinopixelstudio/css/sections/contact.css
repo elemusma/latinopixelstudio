@@ -1,5 +1,5 @@
 input.button {
-    background: var(--accent-tertiary);
+    background: var(--accent-quaternary);
     color: white;
     border: none;
     padding: 10px;
@@ -11,7 +11,7 @@ input.button {
 }
 
 input.button:hover {
-    background: var(--accent-quaternary);
+    background: var(--accent-tertiary);
 }
 
 input,
