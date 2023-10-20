@@ -1,6 +1,6 @@
 <?php
 
-function latino_pixel_studio_stylesheets() {
+function latino_web_studio_stylesheets() {
 wp_enqueue_style('style', get_stylesheet_uri() );
 
 
@@ -38,11 +38,11 @@ wp_enqueue_style('lato', '//fonts.googleapis.com/css2?family=Lato:ital,wght@0,10
 wp_enqueue_style('open-sans', '//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 }
-add_action('wp_enqueue_scripts', 'latino_pixel_studio_stylesheets');
+add_action('wp_enqueue_scripts', 'latino_web_studio_stylesheets');
 
 
 // for footer
-function latino_pixel_studio_stylesheets_footer() {
+function latino_web_studio_stylesheets_footer() {
 
 	wp_enqueue_style('hero', get_theme_file_uri('/css/sections/hero.css'));
 	// if (is_front_page()){
@@ -118,7 +118,7 @@ function latino_pixel_studio_stylesheets_footer() {
 	
 }
 	
-add_action('get_footer', 'latino_pixel_studio_stylesheets_footer');
+add_action('get_footer', 'latino_web_studio_stylesheets_footer');
 
 // loads enqueued javascript files deferred
 function mind_defer_scripts( $tag, $handle, $src ) {
@@ -146,7 +146,7 @@ function mind_defer_scripts( $tag, $handle, $src ) {
 
 
 
-function latino_pixel_studio_menus() {
+function latino_web_studio_menus() {
  register_nav_menus( array(
    'primary' => __( 'Primary Menu' )));
 register_nav_menus( array(
@@ -156,33 +156,13 @@ register_nav_menus( array(
  add_theme_support('post-thumbnails');
 }
 
-add_action('after_setup_theme', 'latino_pixel_studio_menus');
+add_action('after_setup_theme', 'latino_web_studio_menus');
 
 if( function_exists('acf_add_options_page') ) {
 
 	acf_add_options_page();
 }
 
-// add_action('after_setup_theme',function() {
-//     add_theme_support('woocommerce');
-// });
-// add_theme_support('wc-product-gallery-zoom');
-// add_theme_support('wc-product-gallery-lightbox');
-// add_theme_support('wc-product-gallery-slider');
-
-// if(class_exists('WooCommerce')){
-//     require get_template_directory() . '/inc/wc-modifications.php';
-// }
-
-// code from Jeff Inho to enforce 'defer' and remove 'async' for Hubspot specifically
-// function brownsurfing_remove_async_attribute($tag, $handle) {
-//     $arrayhandles=    ['hs-script-loader'];
-//     if ( !in_array($handle,$arrayhandles) ) {
-//         return $tag;
-//     }
-//     return str_replace( 'async', '', $tag );
-// }
-// add_filter('script_loader_tag', 'brownsurfing_remove_async_attribute', 11, 2);
 
 // makes all javascript defer, just add the handle
 // the handle of a javascript script is the ID
@@ -255,5 +235,49 @@ function spacer_shortcode( $atts, $content = null ) {
 }
 
 add_shortcode( 'spacer', 'spacer_shortcode' );
+
+function current_year( $atts, $content = null ) {
+
+	$current_year = date("Y");
+
+	return $current_year;
+
+	// [currentyear]
+}
+
+add_shortcode( 'currentyear', 'current_year' );
+
+function btn_shortcode( $atts, $content = null ) {
+
+	$a = shortcode_atts( array(
+	
+	'class' => '',
+	
+	'href' => '',
+	
+	'style' => '',
+	
+	'target' => '',
+
+	'id' => '',
+	
+	'aria-label' => ''
+	
+	), $atts );
+
+	$id = esc_attr($a['id']);
+
+	// Check if the ID contains the word "modal"
+	if (strpos($id, 'modal') !== false) {
+		return '<span class="btn-main ' . esc_attr($a['class']) . '" aria-label="' . esc_attr($a['aria-label']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">' . $content . '</span>';
+	} else {
+		return '<a class="btn-main ' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">' . $content . '</a>';
+	}
+	
+	// [button href="#" class="btn-main" style=""]Learn More[/button]
+	
+	}
+	
+add_shortcode( 'button', 'btn_shortcode' );
 
 ?>

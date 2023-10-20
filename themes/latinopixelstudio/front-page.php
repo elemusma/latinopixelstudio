@@ -14,60 +14,238 @@ if ( ! post_password_required( $post ) ) {
         echo '<div class="container">';
             echo '<div class="row align-items-center">';
 
-                echo '<div class="col-lg-5 col-md-12">';
-                echo '<h1 class="text-accent-secondary" style="font-size:2.05rem;margin-bottom:0px;">Exclusive Website Offer<br>Don\'t Miss Out!</h1>';
+                echo '<div class="col-12 text-center">';
+                echo '<h1 class="text-accent-secondary" style="margin-bottom:0px;">MORE THAN JUST A WEBSITE</h1>';
 
-                echo '<p style="font-size:80%;"><em>Starting from</em></p>';
+                echo '<p class="" style="font-size:1.5rem;">Helping businesses <span style="text-decoration:underline;">increase revenue</span> by implementing our Client Acquisition System.<br><span style="text-decoration:underline;">Everything a business needs</span>  to dominate in ' . do_shortcode('[currentyear]') . '.</p>';
 
-                echo '<div class="d-flex align-items-start">';
+                echo do_shortcode('[button href="#getStarted"]Schedule a Call[/button]');
+
+                // echo '<h2 class="text-accent-tertiary" style="margin:0px;">Your success is my priority!</h2>';
+                // echo '<h3 class="">Only 10 Spots Left</h3>';
+                // echo '<p>Thorough work to give you the best results. Premium and fast support when you need it.</p>';
+                // echo '<h4>Fill out the form to get started</h4>';
                 
-                
-                echo '<div class="d-flex align-items-start">';
-                echo '<h2 class="relation-two text-accent-senary" style="margin:0px;font-size:4.5rem;">$599.</h2>';
-                echo '<span class="text-accent-senary relation-two" style="font-size:1rem;">99</span>';
-                echo '</div>';
-
-                echo '<div style="margin:0px 0px 0px 25px;">';
-
-                echo '<div class="d-flex align-items-start" style="">';
-                echo '<h4 class="text-accent-secondary" style="margin:0px;text-decoration: line-through;"><em>$1,250.</em></h4>';
-                echo '<span class="text-accent-secondary" style="font-size:.5rem;text-decoration: line-through;"><em>00</em></span>';
-                echo '</div>';
-
-                echo '<span style="font-size:80%;"><em>Savings</em></span>';
-                echo '<h2 class="text-accent-septenary" style="margin:0px;">52%</h2>';
-
-                echo '</div>';
-
-
-                echo '</div>';
-                // echo '<h1 class="bold" style="">Your Dedicated'; 
-                // echo '<div style="min-height:55px;">';
-
-                // echo '<span id="feature-text" style="font-size:2.75rem;"></span>';
-                // echo '<span class="input-cursor"></span>';
-
-                // echo '</div>';
-
-                // echo 'Developer</h1>';
-                echo '<h2 class="text-accent-tertiary" style="margin:0px;">Your success is my priority!</h2>';
-                echo '<h3 class="">Only 10 Spots Left</h3>';
-                echo '<p>Thorough work to give you the best results. Premium and fast support when you need it.</p>';
-                echo '<h4>Fill out the form to get started</h4>';
-                // echo '<a href="' . home_url() . '/portfolio/" target="_self" class="text-accent-secondary">View Portfolio =></a>';
-                echo '</div>';
-
-                echo '<div class="col-lg-7 col-md-12">';
-                
-                echo do_shortcode('[gravityform id="2" title="false" description="false" ajax="true"]');
-                // echo wp_get_attachment_image(1798,'full','',[
-                //     'class'=>'w-100 h-100'
-                // ]);
                 echo '</div>';
 
             echo '</div>';
         echo '</div>';
     echo '</section>';
+
+    // benefits
+    echo '<section class="position-relative hero-content text-white" style="border-top:1px solid white;">';
+    echo '<div class="container-fluid">';
+    echo '<div class="row justify-content-center">';
+
+    echo '<div class="col-md-4 text-center bg-accent-secondary d-flex align-items-center justify-content-center">';
+    echo '<h3>CLARIFY YOUR MESSAGE ONLINE</h3>';
+    echo '</div>';
+    echo '<div class="col-md-4 text-center bg-accent-quaternary d-flex align-items-center justify-content-center">';
+    echo '<h3>TURN WEBSITE VISITORS INTO CLIENTS</h3>';
+    echo '</div>';
+    echo '<div class="col-md-4 text-center bg-accent-secondary d-flex align-items-center justify-content-center">';
+    echo '<h3>STAND OUT FROM COMPETITORS</h3>';
+    echo '</div>';
+
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+
+    // outdated website
+    echo '<section class="position-relative hero-content" style="padding:50px 0px 90px;border-top:1px solid white;">';
+    echo '<div class="container">';
+    echo '<div class="row align-items-center justify-content-center">';
+
+    echo '<div class="col-12 text-center">';
+    echo '<h2>How Much Is An Outdated Website Costing You?</h2>';
+    echo '</div>';
+    
+    echo '<div class="col-lg-5 col-md-6">';
+    echo '<p><strong>Is your website made to work with smartphones?</strong></p>';
+    echo '<p><strong>Do you know how many sales are you missing out on?</strong></p>';
+    echo '<p><strong>Does your website reflect the quality of your services?</strong></p>';
+    echo '</div>';
+    echo '<div class="col-lg-5 col-md-6">';
+    echo '<p><strong>Is your website old &amp; outdated?</strong></p>';
+    echo '<p><strong>Is your website not creating any or enough sales?</strong></p>';
+    echo '<p><strong>Does your website help streamline your business?</strong></p>';
+    echo '</div>';
+
+    echo '<div class="col-md-9 text-center" style="margin-top:2rem;">';
+    echo do_shortcode('[button href="#getStarted"]Schedule a Call[/button]');
+    echo '</div>';
+    
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+
+    // video
+    echo '<section class="position-relative text-white bg-accent-secondary" style="padding:50px 0 90px;border-top:1px solid white;">';
+    echo '<div class="container">';
+    echo '<div class="row align-items-center justify-content-center">';    
+
+    echo '<div class="col-md-9 text-center" style="">';
+    echo '<h2>If you had an employee that was costing you sales would you fire them?</h2>';
+    echo '<p>That employee is your website, let\'s work on fixing it.</p>';
+    echo do_shortcode('[button href="#getStarted"]Schedule a Call[/button]');
+
+    echo '</div>';
+    
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+
+    // messaging
+    echo '<section class="position-relative" style="padding:70px 0 75px;">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Messaging.jpeg" style="width:100%;height:100%;top:0;left:0;object-fit:cover;" class="position-absolute" />';
+    echo '<div class="container">';
+    echo '<div style="top:0;left:0;opacity:.95;background:white;" class="w-100 h-100 position-absolute bg-white"></div>';
+    echo '<div class="row align-items-center justify-content-center">';
+
+    echo '<div class="col-md-4 text-center">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Clarify-Your-message-e1697745621301.png" style="height:100px;width:auto;object-fit:contain;" class="" />';
+    echo '<h3 style="margin-top:.5rem;">CLARIFY YOUR MESSAGE ONLINE</h3>';
+    echo '<p>Our Websites Drive Actual Results By Communicating What You Offer Simply And Clearly.</p>';
+    echo '</div>';
+    echo '<div class="col-md-4 text-center">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Built-To-Sell-e1697747012575.png" style="height:100px;width:auto;object-fit:contain;" class="" />';
+    echo '<h3 style="margin-top:.5rem;">Built To Sell</h3>';
+    echo '<p>We Build Websites With Your Customer In Mind. Our Focus Is To Convert Visitors Into Paying Customers.</p>';
+    echo '</div>';
+    echo '<div class="col-md-4 text-center">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Build-For-The-Moder-Times-e1697747162566.png" style="height:100px;width:auto;object-fit:contain;" class="" />';
+    echo '<h3 style="margin-top:.5rem;">Made For The Current Times</h3>';
+    echo '<p>Give Your Customers The Information They Care About No Matter What Type Of Device The Visitor Is Using.</p>';
+    echo '</div>';
+
+    echo '<div class="col-md-9 text-center" style="margin-top:2rem;">';
+    echo do_shortcode('[button href="#getStarted"]Schedule a Call[/button]');
+
+    echo '</div>';
+
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+
+    // about
+    echo '<section class="position-relative" style="padding:50px 0 90px;border-top:1px solid white;">';
+    echo '<div class="container">';
+    echo '<div class="row align-items-center justify-content-center">';    
+
+    echo '<div class="col-md-9 text-center" style="">';
+    echo '<h2>What Makes Latino Web Studio Different?</h2>';
+    echo '<p>Latino Web Studio\'s websites are innovative because they help you get rid of that confusing website that is costing you money. Instead, design a site with the latest trends, Apple, Uber, and Tesla use to create actual results. The top Forbes 500 companies make millions of dollars using the same framework that we use to build your website. But, how do you know if your site is confusing? The answer is to schedule a consultation and hire us to get the job done.</p>';
+    echo do_shortcode('[button href="#getStarted"]Schedule a Call[/button]');
+
+    echo '</div>';
+    
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+
+    // process
+    echo '<section class="position-relative bg-accent-quaternary text-white" style="border-top:1px solid white;">';
+    echo '<div class="container">';
+    echo '<div class="row align-items-center justify-content-center">';
+
+    echo '<div class="col-md-3 text-center d-flex align-items-center">';
+    echo '<span class="bg-accent-secondary" style="border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    margin-right: 8px;">1.</span>';
+    echo '<h3>Schedule a Free Call</h3>';
+    echo '</div>';
+    echo '<div class="col-md-3 text-center d-flex align-items-center">';
+    echo '<span class="bg-accent-secondary" style="border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    margin-right: 8px;">2.</span>';
+    echo '<h3>We Build Your Website</h3>';
+    echo '</div>';
+    echo '<div class="col-md-3 text-center d-flex align-items-center">';
+    echo '<span class="bg-accent-secondary" style="border-radius: 50%;
+    height: 23px;
+    width: 23px;
+    margin-right: 8px;">3.</span>';
+    echo '<h3>Increase Revenue</h3>';
+    echo '</div>';
+
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+
+    // testimonials
+    echo '<section class="position-relative bg-accent-secondary text-white" style="padding:50px 0 75px;">';
+    echo '<div class="container">';
+    echo '<div class="row justify-content-center">';
+
+    echo '<div class="col-12 text-center" style="padding-bottom:25px;">';
+    echo '<h2>What Our Clients Are Saying...</h2>';
+    echo '<p>Latino Web Studio has worked with a diverse clientele.</p>';
+    echo '</div>';
+    
+    echo '<div class="col-md-4">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Five-Star-Review.png" style="height:20px;width:auto;" />';
+    echo '<h3 style="margin-top:0px;">Eduardo Martimen</h3>';
+    echo '<p>I\'ve being working with Efrain for several years now, the fact that he\'s very professional and responsive it\'s awesome! He\'s very knowledgeable within his field, which is the web designer, he provides an outstanding  service and he\'s always there to provide you with alternative options at all the time! I am very happy with his service and I will refer him to all of my friends that are business owners! ⭐️⭐️⭐️⭐️⭐️</p>';
+    echo '</div>';
+
+    echo '<div class="col-md-4">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Five-Star-Review.png" style="height:20px;width:auto;" />';
+    echo '<h3 style="margin-top:0px;">Samm Diep</h3>';
+    echo '<p>It was such a pleasure working with Efrain! He\'s so professional and dependable. He was able to painlessly meet my very short timeline and I look forward to collaborating with him again on future projects! I would strongly recommend his work for anyone needing a new website. He\'s organized and kept us on task. Highly recommended!!</p>';
+    echo '</div>';
+
+    echo '<div class="col-md-4">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Five-Star-Review.png" style="height:20px;width:auto;" />';
+    echo '<h3 style="margin-top:0px;">Ashek Hossain</h3>';
+    echo '<p>Tadeo is REALLY good at what he does. I needed some development work done before a meeting and he not only completed it ahead of schedule, his execution was better than I had even imagined. I would not hesitate to hire him again. He is a genuine, nice person, and also very dependable.</p>';
+    echo '</div>';
+
+    echo '<div class="col-md-4">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Five-Star-Review.png" style="height:20px;width:auto;" />';
+    echo '<h3 style="margin-top:0px;">Mark McFarland</h3>';
+    echo '<p>AWESOME!  Tadeo makes my company look great online!  Tadeo is responsive and does beautiful work. No matter what needs to be done, he figures things out and just makes it work.  He always delivers great value.<br>
+
+    It\'s been a great journey growing my company online with Tadeo.</p>';
+    echo '</div>';
+
+    echo '<div class="col-md-4">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Five-Star-Review.png" style="height:20px;width:auto;" />';
+    echo '<h3 style="margin-top:0px;">Carrie Davis</h3>';
+    echo '<p>Tadeo is a complete joy to work with. He was incredibly professional and timely in his responses. He also brought up great ideas that I wouldn\'t have thought of. I recommend hi 100%</p>';
+    echo '</div>';
+
+    echo '<div class="col-md-4">';
+    echo '<img src="https://latinowebstudio.com/wp-content/uploads/2023/10/Five-Star-Review.png" style="height:20px;width:auto;" />';
+    echo '<h3 style="margin-top:0px;">Micah Ramirez</h3>';
+    echo '<p>Latino Web Studio is a great resource for anyone looking to star at a business and create a website. Tadeo makes it very simple!</p>';
+    echo '</div>';
+
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+
+
+// get started
+echo '<section class="position-relative hero-content" style="padding:100px 0;" id="getStarted">';
+echo '<div class="container">';
+echo '<div class="row align-items-center justify-content-center">';
+
+    echo '<div class="col-md-9 text-center">';
+
+    echo '<h2>How to Get Started</h2>';
+    echo '<p>If you\'re a business owner looking to acquire more clients and increase your revenue — Schedule a call using the calendar below, and somebody from our team will meet with you on Zoom to see if our Client Acquisition System is a good fit for your business. If you have any questions, email us at <a href="mailto:info@latinowebstudio.com" target="_blank">info@latinowebstudio.com</a>.</p>';
+
+echo '<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/latino-web-studio/45min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->';
+
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</section>';
 
 // // start of checkmarks
 // echo '<section class="bg-accent pt-3 pb-3">';

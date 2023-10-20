@@ -174,7 +174,8 @@ echo '</div>'; // end of col for navigation
 </nav>
 <!-- end of nav -->
 </header>
-<?php if( !is_front_page() && !is_search() && !is_home() && !is_single() ) { 
+<?php 
+if( !is_front_page() && !is_search() && !is_home() && !is_single() ) { 
 
 	
 echo '<section class="hero position-relative" style="padding:50px 0px;">';
@@ -187,40 +188,49 @@ echo '<div class="sunburst">
 
 echo '<div class="container">';
 
-?>
 
-<div class="row">
-<div class="col-md-9">
-<?php if(is_page() && !is_front_page() ){ ?>
-<h1 class="h3 ml2 d-inline-block"><?php the_title(); ?></h1>
 
-<div class="">
-<?php the_field('subtitle'); ?>
-</div>
-<?php 
+echo '<div class="row">';
+echo '<div class="col-md-9">';
+
+if(is_page() && !is_front_page() ){
+
+echo '<h1 class="h3 ml2 d-inline-block"> ' . get_the_title() . ' </h1>';
+
+echo '<div class="">';
+echo get_field('subtitle');
+echo '</div>';
+
 $linkCTAHeader = get_field('cta_button');
 if( $linkCTAHeader ): 
 $linkCTAHeader_url = $linkCTAHeader['url'];
 $linkCTAHeader_title = $linkCTAHeader['title'];
 $linkCTAHeader_target = $linkCTAHeader['target'] ? $linkCTAHeader['target'] : '_self';
-?>
-<a href="<?php echo $linkCTAHeader_url; ?>" target="<?php echo $linkCTAHeader_target; ?>" class="btn btn-lg bg-accent-gradient text-white mt-4 br-25"><?php echo $linkCTAHeader_title; ?></a>
-<?php endif; ?>
-<?php } elseif(is_single()){ ?> 
 
-<?php } elseif(is_author()){ ?> 
-<h1 class="">Author: <?php the_author(); ?></h1>
-<?php } elseif(is_tag()){ ?> 
-<h1 class=""><?php single_tag_title(); ?></h1>
-<?php } elseif(is_category()){ ?> 
-<h1 class=""><?php single_cat_title(); ?></h1>
-<?php } elseif(is_archive()){ ?> 
-<h1 class=""><?php the_archive_title(); ?></h1>
-<?php } ?>
-</div>
-</div>
-</div>
-</section>
-<?php } ?>
-</div>
-</div>
+echo '<a href="' . $linkCTAHeader_url . '" target="' . $linkCTAHeader_target . '" class="btn btn-lg bg-accent-gradient text-white mt-4 br-25">' . $linkCTAHeader_title . '</a>';
+
+endif;
+
+} elseif(is_single()){
+
+
+} elseif(is_author()){
+echo '<h1 class="">Author: ' . get_the_author() . '</h1>';
+} elseif(is_tag()){
+echo '<h1 class=""> ' . single_tag_title() . '</h1>';
+} elseif(is_category()){  
+echo '<h1 class="">' . single_cat_title() . ' </h1>';
+} elseif(is_archive()){  
+echo '<h1 class="">' . the_archive_title() . ' </h1>';
+} 
+
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</section>';
+
+}
+echo '</div>';
+echo '</div>';
+
+?>

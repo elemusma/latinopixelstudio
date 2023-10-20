@@ -136,3 +136,11 @@ strong,
     font-family: relation-two, sans-serif;
     /* font-family: 'tangerineregular'; */
 }
+
+h1 {
+    font-size: 3.75rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
